@@ -1,17 +1,10 @@
 from rest_framework import serializers
 from RESToDo import models
 
-
 class TodoSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username', default='anonymous')
+    is_task_delayed = serializers.ReadOnlyField(source='delayed_status')
+
     class Meta:
-        fields = (
-            'id',
-            'name',
-            'user',
-            'is_new',
-            'is_done',
-            'due_date',
-            'description',
-            'is_delayed',
-        )
+        fields = '__all__'
         model = models.Todo
