@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 1. Index - list of all tasks containing task name, date, status and user who created task.
 ```bash
-curl -X GET http://127.0.0.1:8000/api/v1/index -H "Content-Type: application/json"
+curl -X GET http://127.0.0.1:8000/api/v1/index/ -H "Content-Type: application/json"
 ```
 
 2. My Tasks - list of current user task
