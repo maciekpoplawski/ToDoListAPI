@@ -7,7 +7,6 @@ class Todo(models.Model):
     ToDo list model
     """
 
-
     NEW = 'NEW'
     DONE = 'DONE'
 
